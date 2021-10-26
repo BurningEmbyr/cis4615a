@@ -12,13 +12,13 @@ class CloneExample implements Cloneable {
       return clone;
     }
    
-    void doSomething() { // Overridable
+    final void doSomething() { // Overridable
       for (int i = 0; i < cookies.length; i++) {
         cookies[i].setValue("" + i);
       }
     }
    
-    HttpCookie[] deepCopy() {
+    final HttpCookie[] deepCopy() {
       if (cookies == null) {
         throw new NullPointerException();
       }
